@@ -1,11 +1,11 @@
-<h1>list product</h1>
+<h1>List Product</h1>
 
 <table>
     <thead>
         <tr>
-            <th>name</th>
-            <th>description</th>
-            <th>price</th>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Price</th>
         </tr>
     </thead>
     <tbody>
@@ -14,11 +14,20 @@
             <td>{{$product->name}}</td>
             <td>{{$product->description}}</td>
             <td>{{$product->price}}</td>
+            <td>
+                <a href="/products/{{$product->id}}/edit">Edit</a>
+                <form action="/products/{{$product->id}}" method="POST">
+                    @method('DELETE')
+                    <input type="submit" value="Delete">
+                </form>
+            </td>
         </tr>
         @endforeach
       
         
     </tbody>
+
+    <a href="/products/create">Create</a>
 </table>
 
             
