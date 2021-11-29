@@ -15,9 +15,10 @@
             <td>{{$product->description}}</td>
             <td>{{$product->price}}</td>
             <td>
-                <a href="/products/{{$product->id}}/edit">Edit</a>
+            <a href="/products/{{$product->id}}/edit">Edit</a>
                 <form action="/products/{{$product->id}}" method="POST">
                     @method('DELETE')
+                    @Csrf
                     <input type="submit" value="Delete">
                 </form>
             </td>
