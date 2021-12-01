@@ -17,6 +17,7 @@ class CreateRakTable extends Migration
             $table->id();
             $table->string('rak');
             $table->string('baris');
+            $table->string('slug');
             $table->foreignid('kategori_id');
             $table->timestamps();
         });
