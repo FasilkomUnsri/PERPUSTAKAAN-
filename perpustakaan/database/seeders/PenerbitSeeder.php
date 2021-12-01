@@ -15,14 +15,15 @@ class PenerbitSeeder extends Seeder
      */
     public function run()
     {
-        $penerbit = ['gramedia', 'erlangga'];
+        $penerbit = ['none', 'gramedia', 'erlangga'];
 
         foreach ($penerbit as $key => $value) {
             Penerbit::create([
-                'nama' => $value, 
+                'nama' => $value,
                 'slug' => Str::slug($value)
             ]);
         }
-        
+
+      
     }
 }

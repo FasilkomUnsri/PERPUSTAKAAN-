@@ -1,6 +1,8 @@
 @extends('admin-lte/app')
-@section('title', 'kategori')
-    
+@section('title', 'Kategori')
+@section('active-kategori', 'active')
+@section('active-data-master', 'active')
+
 @section('content')
-    <livewire:kategori></livewire:kategori>
+    <livewire:petugas.kategori></livewire:petugas.kategori>
 @endsection
